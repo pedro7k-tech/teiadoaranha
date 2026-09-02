@@ -17,10 +17,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:ital,wght@0,700;0,800;0,900;1,800;1,900&display=swap" rel="stylesheet">
-    <script type="module" crossorigin src="./assets/index-BkpQu3in.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-DEzOyxCZ.css">
   </head>
   <body class="bg-[#0A0A0E] text-white font-body selection:bg-hero-red selection:text-white antialiased overflow-x-hidden">
     <div id="root"></div>
+    <script>
+      // Se aberto diretamente com duplo clique (file://), redireciona automaticamente para o site pronto em dist/index.html
+      // A verificação extra garante que não entraremos em loop caso já estejamos no arquivo dist/index.html
+      if (window.location.protocol === 'file:' && !window.location.pathname.endsWith('/dist/index.html')) {
+        window.location.replace('./dist/index.html');
+      }
+    </script>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
